@@ -2,6 +2,14 @@
   "name": "@lark-ka/cli",
   "version": "0.1.0",
   "description": "Native Node.js CLI for Feishu/Lark and private deployments",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vibe-lark/lark-ka-cli.git"
+  },
+  "homepage": "https://github.com/vibe-lark/lark-ka-cli#readme",
+  "bugs": {
+    "url": "https://github.com/vibe-lark/lark-ka-cli/issues"
+  },
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -35,7 +43,8 @@
   },
   "license": "MIT",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "prettier": "3.6.2"

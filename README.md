@@ -136,12 +136,19 @@ JSON 结果写 stdout，错误写 stderr；支持 `@file` / stdin、分页、dry
 ## 分发与豆包工作
 
 ```bash
+# 公开版本发布至 npm 官方后安装，要求 Node.js >=22。
+npm install -g @lark-ka/cli@0.1.0 --registry=https://registry.npmjs.org/
+
+# 国内镜像同步到该版本后也可以安装。
+npm install -g @lark-ka/cli@0.1.0 --registry=https://registry.npmmirror.com/
+lark-ka --version
+
+# 本地打包与安装。
 npm pack
-# 使用生成的 tgz 安装；正式发布前确定企业 npm 包名和仓库。
 npm install -g /absolute/path/to/lark-ka-cli-0.1.0.tgz
 ```
 
-企业后台配置见 [docs/doubao-connector.md](docs/doubao-connector.md)。没有发布到 npm，也没有修改本机已有的全局 CLI 或豆包连接器。
+镜像同步可能有延迟，可通过 `npm view @lark-ka/cli@0.1.0 version --registry=https://registry.npmmirror.com/` 查询。企业后台配置见 [docs/doubao-connector.md](docs/doubao-connector.md)。
 
 ## 更新命令定义
 
