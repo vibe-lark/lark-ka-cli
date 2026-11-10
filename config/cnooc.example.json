@@ -1,0 +1,18 @@
+{
+  "brand": "cnooc",
+  "appId": "cli_EXAMPLE_APP_ID",
+  "appSecretEnv": "LARK_KA_APP_SECRET",
+  "openBaseUrl": "https://open.cnooc.example.invalid",
+  "accountsBaseUrl": "https://accounts.cnooc.example.invalid",
+  "webBaseUrl": "https://docs.cnooc.example.invalid",
+  "authorizeUrl": "https://accounts.cnooc.example.invalid/REPLACE_WITH_AUTHORIZATION_PATH",
+  "tokenUrl": "https://open.cnooc.example.invalid/REPLACE_WITH_TOKEN_PATH",
+  "userInfoUrl": "https://open.cnooc.example.invalid/REPLACE_WITH_USER_INFO_PATH",
+  "authFlow": "authorization-code",
+  "clientIdParam": "client_id",
+  "redirectUri": "http://127.0.0.1:8989/lark/oauth/callback",
+  "scope": "REPLACE_WITH_APPROVED_SCOPES",
+  "defaultAs": "user",
+  "strictMode": "user",
+  "docsBackend": "native"
+}

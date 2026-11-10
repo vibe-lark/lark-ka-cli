@@ -1,0 +1,322 @@
+[
+  {
+    "key": "application.application.visibility.added_v6",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "approval.approval.updated",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "board.whiteboard.updated_v1",
+    "authTypes": [
+      "user",
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/whiteboard/register.go",
+    "scopes": [
+      "board:whiteboard:node:read"
+    ],
+    "requiredParams": [
+      "whiteboard_id"
+    ],
+    "preConsume": {
+      "subscribePath": "/open-apis/board/v1/whiteboards/{whiteboard_id}/subscribe",
+      "unsubscribePath": "/open-apis/board/v1/whiteboards/{whiteboard_id}/unsubscribe",
+      "body": {
+        "event_type": "board.whiteboard.updated_v1"
+      }
+    },
+    "resourceFilter": "whiteboard_id"
+  },
+  {
+    "key": "calendar.calendar.acl.created_v4",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "calendar.calendar.event.changed_v4",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "card.action.trigger",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "contact.department.created_v3",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "contact.department.deleted_v3",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "contact.department.updated_v3",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "contact.user.created_v3",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "contact.user.deleted_v3",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "contact.user.updated_v3",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "drive.notice.comment_add_v1",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "im.chat.disbanded_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.chat.member.bot.added_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.chat.member.bot.deleted_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.chat.member.user.added_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.chat.member.user.deleted_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.chat.member.user.withdrawn_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.chat.updated_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.message.message_read_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.message.reaction.created_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.message.reaction.deleted_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.message.receive_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "im.message.updated_v1",
+    "authTypes": [
+      "bot"
+    ],
+    "registered": true,
+    "registrationSource": "events/im/register.go"
+  },
+  {
+    "key": "minutes.minute.generated_v1",
+    "authTypes": [
+      "user"
+    ],
+    "registered": true,
+    "registrationSource": "events/minutes/register.go",
+    "scopes": [
+      "minutes:minutes.basic:read"
+    ],
+    "preConsume": {
+      "subscribePath": "/open-apis/minutes/v1/minutes/subscription",
+      "unsubscribePath": "/open-apis/minutes/v1/minutes/unsubscription",
+      "body": {
+        "event_type": "minutes.minute.generated_v1"
+      }
+    },
+    "recipientField": "subscriber_ids"
+  },
+  {
+    "key": "task.task.comment_updated_v1",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "task.task.update_tenant_v1",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "task.task.update_user_access_v2",
+    "authTypes": [],
+    "registered": false,
+    "rawOnly": true,
+    "rawAuthTypes": [
+      "bot"
+    ]
+  },
+  {
+    "key": "vc.meeting.participant_meeting_ended_v1",
+    "authTypes": [
+      "user"
+    ],
+    "registered": true,
+    "registrationSource": "events/vc/register.go",
+    "scopes": [
+      "vc:meeting.meetingevent:read"
+    ],
+    "preConsume": {
+      "subscribePath": "/open-apis/vc/v1/meetings/subscription",
+      "unsubscribePath": "/open-apis/vc/v1/meetings/unsubscription",
+      "body": {
+        "event_type": "vc.meeting.participant_meeting_ended_v1"
+      }
+    },
+    "recipientField": "subscriber_ids"
+  },
+  {
+    "key": "vc.note.generated_v1",
+    "authTypes": [
+      "user"
+    ],
+    "registered": true,
+    "registrationSource": "events/vc/register.go",
+    "scopes": [
+      "vc:note:read"
+    ],
+    "preConsume": {
+      "subscribePath": "/open-apis/vc/v1/notes/subscription",
+      "unsubscribePath": "/open-apis/vc/v1/notes/unsubscription",
+      "body": {
+        "event_type": "vc.note.generated_v1"
+      }
+    },
+    "recipientField": "subscriber_ids"
+  },
+  {
+    "key": "mail.user_mailbox.event.message_received_v1",
+    "authTypes": [
+      "user"
+    ],
+    "registered": false,
+    "registrationSource": "Node mail +watch (mail events are omitted by the Go registry)",
+    "userFlow": "mail-watch",
+    "requiresDomainTransform": true
+  }
+]

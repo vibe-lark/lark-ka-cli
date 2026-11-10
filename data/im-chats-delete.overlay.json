@@ -1,0 +1,41 @@
+{
+  "_comment": "Local-fork overlay. The upstream merged metadata does not publish DELETE /im/v1/chats (disband group); scripts/fetch_meta.py merges this method into the im.chats resource after every fetch.",
+  "services": {
+    "im": {
+      "resources": {
+        "chats": {
+          "methods": {
+            "delete": {
+              "id": "chats.delete",
+              "httpMethod": "DELETE",
+              "description": "解散群聊。调用后群聊立即解散、所有成员被移出，且无法恢复。Identity: supports `user` and `bot`; only the group owner can disband; a bot must be the owner of the group it created.",
+              "accessTokens": [
+                "tenant",
+                "user"
+              ],
+              "risk": "high-risk-write",
+              "danger": true,
+              "docUrl": "https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/chat/delete",
+              "path": "chats/{chat_id}",
+              "parameters": {
+                "chat_id": {
+                  "type": "string",
+                  "location": "path",
+                  "required": true,
+                  "description": "群 ID。获取方式：;;- [创建群](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/chat/create)，从返回结果中获取该群的 chat_id。;- 调用[获取用户或机器人所在的群列表](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/chat/list)接口，可以查询用户或机器人所在群的 chat_id。;;**注意**：仅支持群模式为 `group` 的群组 ID。",
+                  "example": "oc_a0553eda9014c201e6969b478895c230"
+                }
+              },
+              "parameterOrder": [
+                "chat_id"
+              ],
+              "scopes": [
+                "im:chat"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

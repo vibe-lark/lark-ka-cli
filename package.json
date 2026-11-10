@@ -1,0 +1,43 @@
+{
+  "name": "@lark-ka/cli",
+  "version": "0.1.0",
+  "description": "Native Node.js CLI for Feishu/Lark and private deployments",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "lark-ka": "bin/lark-ka.mjs",
+    "lark-cli": "bin/lark-ka.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "data",
+    "skills",
+    "config",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "compatibility": "node scripts/compatibility.mjs",
+    "metadata:fetch": "node scripts/fetch-metadata.mjs",
+    "start": "node bin/lark-ka.mjs",
+    "format:check": "prettier --check \"src/**/*.mjs\" \"bin/*.mjs\" \"scripts/*.mjs\" \"test/*.mjs\" package.json \"config/*.json\" README.md docs/*.md"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "1.76.0",
+    "qrcode": "^1.5.4",
+    "yaml": "2.9.1"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}
